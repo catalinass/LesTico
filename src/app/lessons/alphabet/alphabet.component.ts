@@ -18,7 +18,7 @@ export class AlphabetComponent implements OnInit {
 
   /* Arrays containing Alphabet letters */
   alphabet = ['A', 'B', 'C', 'CH', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-    'L','LL', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R','RR', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    'L', 'LL', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'RR', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
   /* Current letter on display */
   currentLetter: Key;
@@ -41,7 +41,7 @@ export class AlphabetComponent implements OnInit {
     this.generateKeyboard();
   }
 
-  selectKey(key) {
+  selectKey(key: Key) {
     key.active = true;
     if (this.currentLetter) {
       this.currentLetter.active = false;
