@@ -16,7 +16,7 @@
       <div class="columns is-centered">
         <div class="column cards">
           <mat-card class="sign">
-            <img src="{{ currentLetter.imageURL }}">
+            <img src="{{ currentLetter.imageURL }}"> 
           </mat-card>
           <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="column is-1 has-text-centered">
           <button mat-mini-fab aria-label="Cycle next letter button" (click)="nextLetter()"
-            [disabled]="currentLetter.id === 26">
+            [disabled]="currentLetter.id === 29">
             <mat-icon>keyboard_arrow_right</mat-icon>
           </button>
         </div>
@@ -58,7 +58,6 @@
             </ng-container>
           </div>
           <div class="second-row">
-            <!-- <div class="letter-key">J</div> -->
             <ng-container *ngFor="let key of keyboard.row2;">
               <div class="letter-key" [class.active]="key.active"  [class.seen]="key.checked" (click)="selectKey(key)"> {{ key.letter }} </div>
             </ng-container>

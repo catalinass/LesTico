@@ -17,8 +17,8 @@ export interface Key {
 export class AlphabetComponent implements OnInit {
 
   /* Arrays containing Alphabet letters */
-  alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-    'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  alphabet = ['A', 'B', 'C', 'CH', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+    'L','LL', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R','RR', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
   /* Current letter on display */
   currentLetter: Key;
@@ -57,9 +57,9 @@ export class AlphabetComponent implements OnInit {
     let key: Key;
     this.alphabet.forEach((letter, index) => {
       key = { letter: letter, active: false, checked: false, id: index, imageURL: this.getImageURL(letter) };
-      if (index <= 9) {
+      if (index <= 10) {
         this.keyboard.row1.push(key);
-      } else if (index <= 18) {
+      } else if (index <= 20) {
         this.keyboard.row2.push(key);
       } else {
         this.keyboard.row3.push(key);
@@ -70,23 +70,23 @@ export class AlphabetComponent implements OnInit {
 
   nextLetter() {
     const nextLetter = this.currentLetter.id + 1;
-    if (nextLetter <= 9) {
+    if (nextLetter <= 10) {
       this.selectKey(this.keyboard.row1[nextLetter]);
-    } else if (nextLetter <= 18) {
-      this.selectKey(this.keyboard.row2[nextLetter - 10]);
+    } else if (nextLetter <= 19) {
+      this.selectKey(this.keyboard.row2[nextLetter - 11]);
     } else {
-      this.selectKey(this.keyboard.row3[nextLetter - 19]);
+      this.selectKey(this.keyboard.row3[nextLetter - 20]);
     }
   }
 
   previousLetter() {
     const previousLetter = this.currentLetter.id - 1;
-    if (previousLetter <= 9) {
+    if (previousLetter <= 10) {
       this.selectKey(this.keyboard.row1[previousLetter]);
-    } else if (previousLetter <= 18) {
-      this.selectKey(this.keyboard.row2[previousLetter - 10]);
+    } else if (previousLetter <= 19) {
+      this.selectKey(this.keyboard.row2[previousLetter - 11]);
     } else {
-      this.selectKey(this.keyboard.row3[previousLetter - 19]);
+      this.selectKey(this.keyboard.row3[previousLetter - 20]);
     }
   }
 
@@ -95,7 +95,7 @@ export class AlphabetComponent implements OnInit {
   }
 
   getImageURL(letter: string) {
-    if (letter === 'J' || letter === 'Ñ' || letter === 'Z') {
+    if (letter === 'J' || letter === 'Ñ' || letter === 'Z'|| letter === 'RR' ) {
       return  '../../../assets/alphabet/seña ' + letter + '.gif';
     } else {
       return  '../../../assets/alphabet/seña ' + letter + '.JPG';
