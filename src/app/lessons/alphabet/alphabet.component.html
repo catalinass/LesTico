@@ -4,11 +4,18 @@
       <h2>Lección:</h2>
       <h1>Abecedario</h1>
     </div>
+
+
+
+
+
+
+
     <div class="lesson-body container">
 
       <div class="columns is-centered">
         <div class="column progress">
-          <small>Revisa todas las letras para completar la lección</small>
+          <small>Revisá todas las letras para completar la lección</small>
           <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
         </div>
       </div>
@@ -20,7 +27,6 @@
           </mat-card>
           <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
         </div>
-
       </div>
 
       <div class="columns is-centered">
@@ -43,9 +49,10 @@
           </button>
         </div>
       </div>
+
       <div class="columns is-centered">
         <div class="column is-5 has-text-centered">
-          <small>Utiliza los botones para ver la siguiente letra o selecciona una del teclado de abajo.</small>
+          <small>Utilizá los botones para ver la siguiente letra o seleccioná una del teclado de abajo.</small>
         </div>
       </div>
 
@@ -58,7 +65,6 @@
             </ng-container>
           </div>
           <div class="second-row">
-            <!-- <div class="letter-key">J</div> -->
             <ng-container *ngFor="let key of keyboard.row2;">
               <div class="letter-key" [class.active]="key.active"  [class.seen]="key.checked" (click)="selectKey(key)"> {{ key.letter }} </div>
             </ng-container>
@@ -83,5 +89,13 @@
       </div>
 
     </div>
+
+
+
+
+
+
+
+
   </div>
 </section>
