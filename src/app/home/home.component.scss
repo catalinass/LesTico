@@ -1,0 +1,106 @@
+.lesson-viewer-wrapper {
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+    margin: 5% 20%;
+
+    h1 {
+        font-weight: 300;
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1em;
+        margin-bottom: -5px;
+    }
+
+    small {
+        font-weight: 300;
+        font-size: 80%;
+    }
+
+    .user-info {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 8px 20px;
+        color: rgba(0,0,0,.54);
+        background: rgba(0,0,0,.03);
+        border-bottom: 1px solid #d6d6d6;
+        padding: 1em 5em;
+        cursor: pointer;
+
+        .text-info {
+            width: 25%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            h2 {
+                font-size: 1.3em;
+                font-weight: 300;
+            }
+
+            h2.app-title, h2.user-name {
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+
+            mat-icon {
+                margin-left: 1em;
+            }
+        }
+
+        .text-info.first {
+            justify-content: flex-start;
+        }
+
+        .text-info.last {
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    .home-body {
+
+        button {
+            margin-top: 1em;
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+
+        mat-divider {
+            margin-top: 0.5em;
+        }
+
+        .mini-desc {
+            margin-top: calc(1.5rem - 0.75rem);
+        }
+
+        .mini-footer {
+            margin-bottom: calc(1.5rem - 0.75rem);
+
+            mat-divider {
+                margin-bottom: calc(1.5rem - 0.75rem);
+            }
+        }
+
+        .module2, .module3-a, .module3-b, .module4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+    }
+}
+
+@media screen and (min-width: 1472px) {
+    .home-body.container {
+        max-width: 909px;
+        width: 909px;
+    }
+}

@@ -95,7 +95,7 @@ export class AlphabetComponent implements OnInit {
   }
 
   getImageURL(letter: string) {
-    if (letter === 'J' || letter === 'Ñ' || letter === 'Z'|| letter === 'RR' ) {
+    if (letter === 'J' || letter === 'Ñ' || letter === 'Z' || letter === 'RR' ) {
       return  '../../../assets/alphabet/seña ' + letter + '.gif';
     } else {
       return  '../../../assets/alphabet/seña ' + letter + '.JPG';
