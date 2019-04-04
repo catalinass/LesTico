@@ -1,3 +1,44 @@
-<p>
-  login works!
-</p>
+<section>
+    <div class="lesson-viewer-wrapper">
+        <div class="columns is-centered title-login">
+            <div class="column has-text-centered">
+                <h1>Bienvenido a la aplicacion de LesTico!</h1>
+                <small>Ingresa con tus datos para iniciar tus lecciones.</small>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="columns is-centered">
+                    <div class="column is-8 user-box">
+                        <span class="user-label">Usuario:</span>
+                        <mat-form-field>
+                            <input matInput placeholder="Usuario">
+                            <mat-hint>Poné tu nombre de usuario</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8 password-box">
+                        <span class="password-label">Contraseña:</span>
+                        <mat-form-field>
+                            <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            <mat-hint>Poné tu contraseña</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-4 user-box">
+                        <button mat-raised-button color="primary">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column logo-cont">
+                <span class="logo-test">LesTico</span>
+            </div>
+        </div>
+    </div>
+</section>
