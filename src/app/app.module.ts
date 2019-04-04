@@ -15,12 +15,16 @@ import { MatDividerModule } from '@angular/material/divider';
 import { LoginComponent } from './login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HomeComponent } from './home/home.component';
+import { LessonOptionComponent } from './home/lesson-option/lesson-option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlphabetComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    LessonOptionComponent
   ],
   imports: [
     BrowserModule,
