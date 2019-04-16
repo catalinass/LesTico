@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   togglePanes(lesson: string) {
     console.log(lesson);
-    if (this.paneCounter !== 1) {
+    if (this.paneCounter !== 2) {
       this.paneCounter++;
     } else {
       this.paneCounter = 0;
