@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  togglePanes() {
+  togglePanes(lesson: string) {
+    console.log(lesson);
     if (this.paneCounter !== 1) {
       this.paneCounter++;
     } else {
