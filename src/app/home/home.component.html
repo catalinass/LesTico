@@ -1,89 +1,101 @@
 <section>
+
+    <button (click)="togglePanes()">
+    Toggle panes
+  </button>
     <div class="lesson-viewer-wrapper">
-        <div class="user-info">
-            <div class="text-info first">
-                <h2 class="app-title">LesTico</h2>
-            </div>
-            <div class="text-info">
-                <h2>Nivel: 3</h2>
-            </div>
-            <div class="text-info">
-                <h2>Promedio: 87%</h2>
-            </div>
-            <div class="text-info last">
-                <h2 class="user-name">Catalina</h2>
-                <mat-icon>account_circle</mat-icon>
-            </div>
-        </div>
-
-        <div class="home-body container">
-            <div class="columns is-centered mini-desc">
-                <div class="column has-text-centered">
-                    <small>Seleccioná una lección para comenzar a aprender Lesco</small>
-                    <mat-divider></mat-divider>
-                </div>
-            </div>
-
-            <!-- Module 1: Alphabet -->
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h2>Empecemos con lo básico, el abecedario</h2>
-                    <app-lesson-option [shortTitle]="'Abecedario'"></app-lesson-option>
-                    <button mat-raised-button color="primary">Hacer Quiz</button>
-                </div>
-            </div>
-
-            <!-- Module 2: Numbers -->
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h2>Aprendé sobre números y lugares</h2>
-                    <div class="module2">
-                        <app-lesson-option [shortTitle]="'Números'"></app-lesson-option>
-                        <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
+        <app-main-slider [activePane]="activePane">
+            <div firstPane>
+                <div class="user-info">
+                    <div class="text-info first">
+                        <h2 class="app-title">LesTico</h2>
                     </div>
-                    <button mat-raised-button color="primary">Hacer Quiz</button>
-                </div>
-            </div>
-
-            <!-- Module 3: Numbers -->
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h2>Aprendé palabras generales y animales</h2>
-                    <div class="module3-a">
-                        <app-lesson-option [shortTitle]="'Animales'"></app-lesson-option>
-                        <app-lesson-option [shortTitle]="'Comidas'"></app-lesson-option>
-                        <app-lesson-option [shortTitle]="'Colores'"></app-lesson-option>
+                    <div class="text-info">
+                        <h2>Nivel: 3</h2>
                     </div>
-                    <div class="module3-b">
-                        <app-lesson-option [shortTitle]="'Plurales'"></app-lesson-option>
-                        <app-lesson-option [shortTitle]="'Definitivos'"></app-lesson-option>
+                    <div class="text-info">
+                        <h2>Promedio: 87%</h2>
                     </div>
-                    <button mat-raised-button color="primary">Hacer Quiz</button>
-                </div>
-            </div>
-
-            <!-- Module 4: Foods -->
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h2>Frases comunes</h2>
-                    <div class="module4">
-                        <app-lesson-option [shortTitle]="'Frases 1'"></app-lesson-option>
-                        <app-lesson-option [shortTitle]="'Frases 2'"></app-lesson-option>
-                        <app-lesson-option [shortTitle]="'Frases 3'"></app-lesson-option>
+                    <div class="text-info last">
+                        <h2 class="user-name">Catalina</h2>
+                        <mat-icon>account_circle</mat-icon>
                     </div>
-                    <button mat-raised-button color="primary">Hacer Quiz</button>
+                </div>
+
+                <div class="home-body container">
+                    <div class="columns is-centered mini-desc">
+                        <div class="column has-text-centered">
+                            <small>Seleccioná una lección para comenzar a aprender Lesco</small>
+                            <mat-divider></mat-divider>
+                        </div>
+                    </div>
+
+                    <!-- Module 1: Alphabet -->
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h2>Empecemos con lo básico, el abecedario</h2>
+                            <app-lesson-option [shortTitle]="'Abecedario'"></app-lesson-option>
+                            <button mat-raised-button color="primary">Hacer Quiz</button>
+                        </div>
+                    </div>
+
+                    <!-- Module 2: Numbers -->
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h2>Aprendé sobre números y lugares</h2>
+                            <div class="module2">
+                                <app-lesson-option [shortTitle]="'Números'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
+                            </div>
+                            <button mat-raised-button color="primary">Hacer Quiz</button>
+                        </div>
+                    </div>
+
+                    <!-- Module 3: Numbers -->
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h2>Aprendé palabras generales y animales</h2>
+                            <div class="module3-a">
+                                <app-lesson-option [shortTitle]="'Animales'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Comidas'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Colores'"></app-lesson-option>
+                            </div>
+                            <div class="module3-b">
+                                <app-lesson-option [shortTitle]="'Plurales'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Definitivos'"></app-lesson-option>
+                            </div>
+                            <button mat-raised-button color="primary">Hacer Quiz</button>
+                        </div>
+                    </div>
+
+                    <!-- Module 4: Foods -->
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h2>Frases comunes</h2>
+                            <div class="module4">
+                                <app-lesson-option [shortTitle]="'Frases 1'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Frases 2'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Frases 3'"></app-lesson-option>
+                            </div>
+                            <button mat-raised-button color="primary">Hacer Quiz</button>
+                        </div>
+                    </div>
+
+                    <div class="columns is-centered mini-footer">
+                        <div class="column has-text-centered">
+                            <mat-divider></mat-divider>
+                            <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto resolveremos tus
+                dudas.</small>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="columns is-centered mini-footer">
-                <div class="column has-text-centered">
-                    <mat-divider></mat-divider>
-                    <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto resolveremos tus
-            dudas.</small>
-                </div>
+            <div secondPane>
+                <app-alphabet></app-alphabet>
             </div>
+        </app-main-slider>
 
-        </div>
 
     </div>
 </section>

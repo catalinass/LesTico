@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HomeComponent } from './home/home.component';
 import { LessonOptionComponent } from './home/lesson-option/lesson-option.component';
+import { MainSliderComponent } from './main-slider/main-slider.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LessonOptionComponent } from './home/lesson-option/lesson-option.compon
     AlphabetComponent,
     LoginComponent,
     HomeComponent,
-    LessonOptionComponent
+    LessonOptionComponent,
+    MainSliderComponent
   ],
   imports: [
     BrowserModule,

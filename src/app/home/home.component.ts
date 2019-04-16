@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  paneCounter = 0;
+
+  panes = ['first', 'second', 'third', 'fourth', 'fifth'];
+
+  activePane = 'first';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  togglePanes() {
+    if (this.paneCounter !== 1) {
+      this.paneCounter++;
+    } else {
+      this.paneCounter = 0;
+    }
+    console.log(this.paneCounter);
+    this.activePane = this.panes[this.paneCounter];
   }
 
 }
