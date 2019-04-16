@@ -1,101 +1,100 @@
 <section>
-  <div class="lesson-viewer-wrapper">
-    <div class="lesson-title">
+
+  <div class="columns lesson-title">
+    <div class="column is-2">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </div>
+    <div class="column is-8 has-text-centered">
       <h2>Lección:</h2>
       <h1>Abecedario</h1>
     </div>
-
-
-
-
-
-
-
-    <div class="lesson-body container">
-
-      <div class="columns is-centered">
-        <div class="column progress">
-          <small>Revisá todas las letras para completar la lección</small>
-          <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column cards">
-          <mat-card class="sign">
-            <img src="{{ currentLetter.imageURL }}"> 
-          </mat-card>
-          <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-6 has-text-centered">
-          <h2>La imagen de la izquierda muestra la seña y la derecha muestra la letra correspondiente.</h2>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-1 has-text-centered">
-          <button mat-mini-fab aria-label="Cycle previous letter button" (click)="previousLetter()"
-            [disabled]="currentLetter.id === 0">
-            <mat-icon>keyboard_arrow_left</mat-icon>
-          </button>
-        </div>
-        <div class="column is-1 has-text-centered">
-          <button mat-mini-fab aria-label="Cycle next letter button" (click)="nextLetter()"
-            [disabled]="currentLetter.id === 29">
-            <mat-icon>keyboard_arrow_right</mat-icon>
-          </button>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-5 has-text-centered">
-          <small>Utilizá los botones para ver la siguiente letra o seleccioná una del teclado de abajo.</small>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column keyboard">
-
-          <div class="first-row">
-            <ng-container *ngFor="let key of keyboard.row1;">
-              <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)"> {{ key.letter }} </div>
-            </ng-container>
-          </div>
-          <div class="second-row">
-            <ng-container *ngFor="let key of keyboard.row2;">
-              <div class="letter-key" [class.active]="key.active"  [class.seen]="key.checked" (click)="selectKey(key)"> {{ key.letter }} </div>
-            </ng-container>
-          </div>
-          <div class="third-row">
-            <ng-container *ngFor="let key of keyboard.row3;">
-              <div class="letter-key" [class.active]="key.active"  [class.seen]="key.checked" (click)="selectKey(key)"> {{ key.letter }} </div>
-            </ng-container>
-          </div>
-
-        </div>
-      </div>
-
-      <mat-divider></mat-divider>
-
-      <div class="columns is-centered">
-        <div class="column is-3 has-text-centered quiz">
-          <button mat-raised-button aria-label="Start quiz" color="accent" (click)="startQuiz()" [disabled]="progress < barLimit">
-            Empezar Quiz
-          </button>
-        </div>
-      </div>
-
+    <div class="column is-2">
+      <!-- Empty column just to make it even -->
     </div>
 
+  </div>
 
+  <div class="lesson-body container">
 
+    <div class="columns is-centered">
+      <div class="column progress">
+        <small>Revisá todas las letras para completar la lección</small>
+        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+      </div>
+    </div>
 
+    <div class="columns is-centered">
+      <div class="column cards">
+        <mat-card class="sign">
+          <img src="{{ currentLetter.imageURL }}">
+        </mat-card>
+        <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
+      </div>
+    </div>
 
+    <div class="columns is-centered">
+      <div class="column is-6 has-text-centered">
+        <h2>La imagen de la izquierda muestra la seña y la derecha muestra la letra correspondiente.</h2>
+      </div>
+    </div>
 
+    <div class="columns is-centered">
+      <div class="column is-1 has-text-centered">
+        <button mat-mini-fab aria-label="Cycle previous letter button" (click)="previousLetter()"
+          [disabled]="currentLetter.id === 0">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+      </div>
+      <div class="column is-1 has-text-centered">
+        <button mat-mini-fab aria-label="Cycle next letter button" (click)="nextLetter()"
+          [disabled]="currentLetter.id === 29">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+    </div>
 
+    <div class="columns is-centered">
+      <div class="column is-5 has-text-centered">
+        <small>Utilizá los botones para ver la siguiente letra o seleccioná una del teclado de abajo.</small>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column keyboard">
+
+        <div class="first-row">
+          <ng-container *ngFor="let key of keyboard.row1;">
+            <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)">
+              {{ key.letter }} </div>
+          </ng-container>
+        </div>
+        <div class="second-row">
+          <ng-container *ngFor="let key of keyboard.row2;">
+            <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)">
+              {{ key.letter }} </div>
+          </ng-container>
+        </div>
+        <div class="third-row">
+          <ng-container *ngFor="let key of keyboard.row3;">
+            <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)">
+              {{ key.letter }} </div>
+          </ng-container>
+        </div>
+
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="columns is-centered">
+      <div class="column is-3 has-text-centered quiz">
+        <button mat-raised-button aria-label="Start quiz" color="accent" (click)="startQuiz()"
+          [disabled]="progress < barLimit">
+          Empezar Quiz
+        </button>
+      </div>
+    </div>
 
   </div>
+
 </section>
