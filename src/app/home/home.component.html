@@ -34,7 +34,7 @@
                     <div class="columns is-centered">
                         <div class="column has-text-centered">
                             <h2>Empecemos con lo básico, el abecedario</h2>
-                            <app-lesson-option [shortTitle]="'Abecedario'"></app-lesson-option>
+                            <app-lesson-option [shortTitle]="'Abecedario'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé sobre números y lugares</h2>
                             <div class="module2">
-                                <app-lesson-option [shortTitle]="'Números'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
                                 <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
