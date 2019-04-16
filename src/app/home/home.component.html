@@ -1,8 +1,8 @@
 <section>
 
     <button (click)="togglePanes()">
-    Toggle panes
-  </button>
+        Toggle panes
+    </button>
     <div class="lesson-viewer-wrapper">
         <app-main-slider [activePane]="activePane">
             <div firstPane>
@@ -34,7 +34,8 @@
                     <div class="columns is-centered">
                         <div class="column has-text-centered">
                             <h2>Empecemos con lo básico, el abecedario</h2>
-                            <app-lesson-option [shortTitle]="'Abecedario'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
+                            <app-lesson-option [shortTitle]="'Abecedario'" (emitOpenLesson)='togglePanes($event)'>
+                            </app-lesson-option>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
                     </div>
@@ -44,7 +45,8 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé sobre números y lugares</h2>
                             <div class="module2">
-                                <app-lesson-option [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'>
+                                </app-lesson-option>
                                 <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
@@ -84,8 +86,9 @@
                     <div class="columns is-centered mini-footer">
                         <div class="column has-text-centered">
                             <mat-divider></mat-divider>
-                            <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto resolveremos tus
-                dudas.</small>
+                            <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto
+                                resolveremos tus
+                                dudas.</small>
                         </div>
                     </div>
 
@@ -93,6 +96,9 @@
             </div>
             <div secondPane>
                 <app-alphabet></app-alphabet>
+            </div>
+            <div secondPane>
+                <h1>Quiz</h1>
             </div>
         </app-main-slider>
 

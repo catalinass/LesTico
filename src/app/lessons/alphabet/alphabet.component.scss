@@ -1,13 +1,14 @@
 .lesson-title {
-    align-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 8px 20px;
+    
+    flex: 1;
     color: rgba(0,0,0,.54);
     background: rgba(0,0,0,.03);
     border-bottom: 1px solid #d6d6d6;
+    padding: 1em 5em;
+
+    .back {
+        margin: auto;
+    }
 }
 
 .lesson-body {
@@ -130,6 +131,13 @@ mat-progress-bar {
     .lesson-body.container {
         max-width: 909px;
         width: 909px;
+    }
+}
+
+@media screen and (min-width: 1472px) {
+    .lesson-title.container {
+        max-width: 1141px;
+        width: 1141px;
     }
 }
 
