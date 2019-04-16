@@ -16,7 +16,7 @@ export class LessonOptionComponent implements OnInit {
   }
 
   openLesson() {
-    this.emitOpenLesson.emit(this.shortTitle)
+    this.emitOpenLesson.emit(this.shortTitle);
   }
 
 }
