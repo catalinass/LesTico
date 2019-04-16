@@ -4,7 +4,7 @@
 }
 .parent {
     height: 100%;
-    width: 200%;      /* Make the parent element to take up twice
+    width: 300%;      /* Make the parent element to take up thrice
                             of the component's width */
     display: flex;    /* Align all children in a row */
 div { flex: 1; }  /* Evenly divide width between children */
