@@ -23,16 +23,29 @@
         </div>
     </div>
 
-    <!-- <div class="columns is-centered">
+    <div class="columns is-centered">
         <div class="column cards">
             <mat-card class="sign">
                 <img src="{{ currentLetter.imageURL }}">
             </mat-card>
             <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
         </div>
-    </div> -->
+    </div>
     
     <mat-divider></mat-divider>
+
+    <div class="columns is-centered match-answer">
+        <div class="column is-3 has-text-centered correct">
+            <button mat-icon-button class="answer-correct" (click)="isCorrect()">
+                <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
+            </button>
+        </div>
+        <div class="column is-3 has-text-centered incorrect">
+            <button mat-icon-button class="answer-incorrect" (click)="isIncorrect()">
+                <mat-icon aria-label="Button to choose match is incorrect.">close</mat-icon>
+            </button>
+        </div>
+    </div>
 
     <div class="columns is-centered">
         <div class="column is-3 has-text-centered quiz">

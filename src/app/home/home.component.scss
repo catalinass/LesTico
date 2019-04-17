@@ -103,3 +103,17 @@
         width: 909px;
     }
 }
+
+@media screen and (min-width: 1472px) {
+    .user-info.container {
+        max-width: 909px;
+        width: 909px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .user-info.container {
+        max-width: 1117px;
+        width: 1117px;
+    }
+}
