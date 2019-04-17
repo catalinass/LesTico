@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class LessonOptionComponent implements OnInit {
 
   @Input() shortTitle: string;
+  @Input() iconName: string;
   @Output() emitOpenLesson = new EventEmitter();
 
   constructor() {}
