@@ -25,6 +25,10 @@ export class AlphabetQuizComponent implements OnInit {
   /* Progress bar max limit */
   barLimit = this.barSkip * this.questionCount;
 
+  correctSelected: boolean;
+
+  incorrectSelected: boolean;
+
   constructor() { }
 
   ngOnInit() {
@@ -42,6 +46,16 @@ export class AlphabetQuizComponent implements OnInit {
   goBack() {
     // Testing
     this.emitGoBack.emit();
+  }
+
+  isCorrect() {
+    this.correctSelected = true;
+    this.incorrectSelected = false;
+  }
+
+  isIncorrect() {
+    this.incorrectSelected = true;
+    this.correctSelected = false;
   }
 
 }

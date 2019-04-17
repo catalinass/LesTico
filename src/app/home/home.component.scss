@@ -2,6 +2,7 @@
     border: 1px solid rgba(0,0,0,.03);
     box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
     margin: 5% 20%;
+    max-width: 1118px;
 
     h1 {
         font-weight: 300;
@@ -113,7 +114,7 @@
 
 @media screen and (min-width: 1800px) {
     .user-info.container {
-        max-width: 1117px;
-        width: 1117px;
+        max-width: 1116px;
+        width: 1116px;
     }
 }

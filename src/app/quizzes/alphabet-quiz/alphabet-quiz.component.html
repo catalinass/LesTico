@@ -1,59 +1,66 @@
 <div class="quiz-title container">
-    <div class="columns">
-        <div class="column is-2 back">
-            <button mat-icon-button (click)="goBack()">
-                <mat-icon aria-label="Go back to homepage button.">keyboard_arrow_left</mat-icon>
-            </button>
-        </div>
-        <div class="column is-8 has-text-centered">
-            <h2>Quiz:</h2>
-            <h1>Abecedario</h1>
-        </div>
-        <div class="column is-2">
-        </div>
+  <div class="columns">
+    <div class="column is-2 back">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon aria-label="Go back to homepage button.">keyboard_arrow_left</mat-icon>
+      </button>
     </div>
+    <div class="column is-8 has-text-centered">
+      <h2>Quiz:</h2>
+      <h1>Abecedario</h1>
+    </div>
+    <div class="column is-2">
+    </div>
+  </div>
 </div>
 <!-- <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar> -->
 <div class="quiz-body container">
 
-    <div class="columns is-centered">
-        <div class="column question">
-            
-            <small>¿La seña corresponde a la letra?</small>
-        </div>
-    </div>
+  <div class="columns is-centered">
+    <div class="column question">
 
-    <div class="columns is-centered">
-        <div class="column cards">
-            <mat-card class="sign">
-                <img src="{{ currentLetter.imageURL }}">
-            </mat-card>
-            <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
-        </div>
+      <small>¿La seña corresponde a la letra?</small>
     </div>
-    
-    <mat-divider></mat-divider>
+  </div>
 
-    <div class="columns is-centered match-answer">
-        <div class="column is-3 has-text-centered correct">
-            <button mat-icon-button class="answer-correct" (click)="isCorrect()">
-                <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
-            </button>
-        </div>
-        <div class="column is-3 has-text-centered incorrect">
-            <button mat-icon-button class="answer-incorrect" (click)="isIncorrect()">
-                <mat-icon aria-label="Button to choose match is incorrect.">close</mat-icon>
-            </button>
-        </div>
+  <div class="columns is-centered">
+    <div class="column cards">
+      <mat-card class="sign">
+        <img src="{{ currentLetter.imageURL }}">
+      </mat-card>
+      <mat-card class="letter"> {{ currentLetter.letter }} </mat-card>
     </div>
+  </div>
 
-    <div class="columns is-centered">
-        <div class="column is-3 has-text-centered quiz">
-            <button mat-raised-button aria-label="Start quiz" color="accent" (click)="startQuiz()"
-                [disabled]="progress < barLimit">
-                Calificar
-            </button>
-        </div>
+  <mat-divider></mat-divider>
+
+  <div class="columns is-centered match-answer">
+    <div class="column is-3 has-text-centered correct">
+      <button mat-icon-button class="answer-correct" [class.selected]="correctSelected" (click)="isCorrect()">
+        <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
+      </button>
     </div>
+    <div class="column is-3 has-text-centered incorrect">
+      <button mat-icon-button class="answer-incorrect" [class.selected]="incorrectSelected" (click)="isIncorrect()">
+        <mat-icon aria-label="Button to choose match is incorrect.">close</mat-icon>
+      </button>
+    </div>
+  </div>
 
+</div>
+
+<div class="quiz-check container">
+  <div class="columns">
+    <div class="column">
+      <button mat-icon-button class="answer-correct" [class.selected]="correctSelected" (click)="isCorrect()">
+        <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
+      </button>
+    </div>
+    <div class="column is-3 has-text-centered">
+      <button class="check-quiz" mat-raised-button aria-label="Calificar respuesta" color="accent"
+        (click)="checkAnswer()" [disabled]="correctSelected === undefined && incorrectSelected === undefined">
+        Calificar
+      </button>
+    </div>
+  </div>
 </div>
