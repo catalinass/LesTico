@@ -40,6 +40,7 @@ export class AlphabetQuizComponent implements OnInit {
   }
 
   goBack() {
+    // Testing
     this.emitGoBack.emit();
   }
 
