@@ -134,12 +134,12 @@ mat-progress-bar {
     }
 }
 
-@media screen and (min-width: 1472px) {
-    .lesson-title.container {
-        max-width: 1141px;
-        width: 1141px;
-    }
-}
+// @media screen and (min-width: 1472px) {
+//     .lesson-title.container {
+//         max-width: 1141px;
+//         width: 1141px;
+//     }
+// }
 
 ::ng-deep .mat-progress-bar-fill::after {
     background-color: #3b9d43;
