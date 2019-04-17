@@ -95,10 +95,10 @@
                 </div>
             </div>
             <div secondPane>
-                <app-alphabet></app-alphabet>
+                <app-alphabet (emitGoBack)='handleGoBack($event)'></app-alphabet>
             </div>
-            <div secondPane>
-                <h1>Quiz</h1>
+            <div thirdPane>
+                <app-alphabet-quiz (emitGoBack)='handleGoBack($event)'></app-alphabet-quiz>
             </div>
         </app-main-slider>
 

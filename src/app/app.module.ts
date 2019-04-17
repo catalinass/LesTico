@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { HomeComponent } from './home/home.component';
 import { LessonOptionComponent } from './home/lesson-option/lesson-option.component';
 import { MainSliderComponent } from './main-slider/main-slider.component';
+import { AlphabetQuizComponent } from './quizzes/alphabet-quiz/alphabet-quiz.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MainSliderComponent } from './main-slider/main-slider.component';
     LoginComponent,
     HomeComponent,
     LessonOptionComponent,
-    MainSliderComponent
+    MainSliderComponent,
+    AlphabetQuizComponent
   ],
   imports: [
     BrowserModule,

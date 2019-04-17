@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 export interface Key {
   letter: string;
@@ -15,6 +15,8 @@ export interface Key {
   styleUrls: ['./alphabet.component.scss']
 })
 export class AlphabetComponent implements OnInit {
+
+  @Output() emitGoBack = new EventEmitter();
 
   /* Arrays containing Alphabet letters */
   alphabet = ['A', 'B', 'C', 'CH', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
@@ -100,6 +102,10 @@ export class AlphabetComponent implements OnInit {
     } else {
       return  '../../../assets/alphabet/seña ' + letter + '.JPG';
     }
+  }
+
+  goBack() {
+    this.emitGoBack.emit();
   }
 
 }
