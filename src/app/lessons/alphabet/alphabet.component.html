@@ -41,14 +41,12 @@
 
     <div class="columns is-centered">
         <div class="column is-1 has-text-centered">
-            <button mat-mini-fab aria-label="Cycle previous letter button" (click)="previousLetter()"
-                [disabled]="currentLetter.id === 0">
+            <button mat-mini-fab aria-label="Cycle previous letter button" (click)="previousLetter()" [disabled]="currentLetter.id === 0">
                 <mat-icon>keyboard_arrow_left</mat-icon>
             </button>
         </div>
         <div class="column is-1 has-text-centered">
-            <button mat-mini-fab aria-label="Cycle next letter button" (click)="nextLetter()"
-                [disabled]="currentLetter.id === 29">
+            <button mat-mini-fab aria-label="Cycle next letter button" (click)="nextLetter()" [disabled]="currentLetter.id === 29">
                 <mat-icon>keyboard_arrow_right</mat-icon>
             </button>
         </div>
@@ -65,22 +63,19 @@
 
             <div class="first-row">
                 <ng-container *ngFor="let key of keyboard.row1;">
-                    <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked"
-                        (click)="selectKey(key)">
+                    <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)">
                         {{ key.letter }} </div>
                 </ng-container>
             </div>
             <div class="second-row">
                 <ng-container *ngFor="let key of keyboard.row2;">
-                    <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked"
-                        (click)="selectKey(key)">
+                    <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)">
                         {{ key.letter }} </div>
                 </ng-container>
             </div>
             <div class="third-row">
                 <ng-container *ngFor="let key of keyboard.row3;">
-                    <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked"
-                        (click)="selectKey(key)">
+                    <div class="letter-key" [class.active]="key.active" [class.seen]="key.checked" (click)="selectKey(key)">
                         {{ key.letter }} </div>
                 </ng-container>
             </div>
@@ -91,9 +86,8 @@
     <mat-divider></mat-divider>
 
     <div class="columns is-centered">
-        <div class="column is-3 has-text-centered quiz">
-            <button mat-raised-button aria-label="Start quiz" color="accent" (click)="startQuiz()"
-                [disabled]="progress < barLimit">
+        <div class="column is-3 has-text-centered quiz" (click)="openQuiz()">
+            <button mat-raised-button aria-label="Start quiz" color="accent" (click)="startQuiz()" [disabled]="progress < barLimit">
                 Empezar Quiz
             </button>
         </div>

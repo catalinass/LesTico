@@ -17,6 +17,7 @@ export interface Key {
 export class AlphabetComponent implements OnInit {
 
   @Output() emitGoBack = new EventEmitter();
+  @Output() emitOpenQuiz = new EventEmitter();
 
   /* Arrays containing Alphabet letters */
   alphabet = ['A', 'B', 'C', 'CH', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
@@ -93,7 +94,7 @@ export class AlphabetComponent implements OnInit {
   }
 
   startQuiz() {
-    console.log('We haven\'t created this component yet...');
+    this.emitOpenQuiz.emit();
   }
 
   getImageURL(letter: string) {
