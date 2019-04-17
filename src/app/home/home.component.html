@@ -1,8 +1,8 @@
 <section>
 
     <button (click)="togglePanes()">
-        Toggle panes
-    </button>
+    Toggle panes
+  </button>
     <div class="lesson-viewer-wrapper">
         <app-main-slider [activePane]="activePane">
             <div firstPane>
@@ -45,9 +45,9 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé sobre números y lugares</h2>
                             <div class="module2">
-                                <app-lesson-option [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'>
-                                </app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Saludos'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Colores'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -58,13 +58,13 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé palabras generales y animales</h2>
                             <div class="module3-a">
-                                <app-lesson-option [shortTitle]="'Animales'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Comidas'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Colores'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Familia'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Comida'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
                             </div>
                             <div class="module3-b">
-                                <app-lesson-option [shortTitle]="'Plurales'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Definitivos'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Frases'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Preguntas'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -75,9 +75,9 @@
                         <div class="column has-text-centered">
                             <h2>Frases comunes</h2>
                             <div class="module4">
-                                <app-lesson-option [shortTitle]="'Frases 1'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Frases 2'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Frases 3'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Verbos 1'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Animales'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Verbos 2'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -86,19 +86,15 @@
                     <div class="columns is-centered mini-footer">
                         <div class="column has-text-centered">
                             <mat-divider></mat-divider>
-                            <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto
-                                resolveremos tus
-                                dudas.</small>
+                            <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto resolveremos tus
+                                    dudas.</small>
                         </div>
                     </div>
 
                 </div>
             </div>
             <div secondPane>
-                <app-alphabet (emitGoBack)='handleGoBack($event)'></app-alphabet>
-            </div>
-            <div thirdPane>
-                <app-alphabet-quiz (emitGoBack)='handleGoBack($event)'></app-alphabet-quiz>
+                <app-alphabet></app-alphabet>
             </div>
         </app-main-slider>
 
