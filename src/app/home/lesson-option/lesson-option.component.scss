@@ -24,5 +24,43 @@
         font-weight: 300;
         font-size: .9em;
     }
+
+    .option.mod-1 {
+        border: 2px solid #f34040;
+        mat-icon {
+            color: #f34040;
+        }
+    }
+    .option.mod-2 {
+        border: 2px solid #f1993d;
+        mat-icon {
+            color: #f1993d;
+        }
+    }
+    .option.mod-3a {
+        border: 2px solid #f1e170;
+        mat-icon {
+            color: #f1e170;
+        }
+    }
+    .option.mod-3b {
+        border: 2px solid #93b969;
+        mat-icon {
+            color: #93b969;
+        }
+    }
+    .option.mod-4a {
+        border: 2px solid #7cc6dc;
+        mat-icon {
+            color: #7cc6dc;
+        }
+    }
+    .option.mod-4b {
+        border: 2px solid #a36aef;
+        mat-icon {
+            color: #a36aef;
+        }
+    }
 }
+
 

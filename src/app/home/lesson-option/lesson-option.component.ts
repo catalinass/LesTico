@@ -9,6 +9,7 @@ export class LessonOptionComponent implements OnInit {
 
   @Input() shortTitle: string;
   @Input() iconName: string;
+  @Input() module: string;
   @Output() emitOpenLesson = new EventEmitter();
 
   constructor() {}
