@@ -51,10 +51,15 @@
 
 <div class="quiz-check container">
   <div class="columns">
-    <div class="column">
-      <button mat-icon-button class="answer-correct" [class.selected]="correctSelected" (click)="isCorrect()">
-        <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
-      </button>
+    <div class="column has-text-centered">
+      <div class="wrapper">
+        <button mat-icon-button class="answer-correct" [class.selected]="correctSelected" (click)="isCorrect()">
+          <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
+        </button>
+        <h2>Some text about this being the right answer</h2>
+        <h2>Some text about this being the right answer</h2>
+      </div>
+
     </div>
     <div class="column is-3 has-text-centered">
       <button class="check-quiz" mat-raised-button aria-label="Calificar respuesta" color="accent"
