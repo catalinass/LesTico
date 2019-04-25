@@ -8,6 +8,10 @@ export interface Key {
   imageURL: string;
 }
 
+export interface Letter {
+  letter: string;
+  imageURL: string;
+}
 
 @Component({
   selector: 'app-alphabet',
@@ -81,10 +85,10 @@ export class AlphabetComponent implements OnInit {
     const nextLetter = this.currentLetter.id + 1;
     if (nextLetter <= 10) {
       this.selectKey(this.keyboard.row1[nextLetter]);
-    } else if (nextLetter <= 19) {
+    } else if (nextLetter <= 20) {
       this.selectKey(this.keyboard.row2[nextLetter - 11]);
     } else {
-      this.selectKey(this.keyboard.row3[nextLetter - 20]);
+      this.selectKey(this.keyboard.row3[nextLetter - 21]);
     }
   }
 
@@ -92,10 +96,10 @@ export class AlphabetComponent implements OnInit {
     const previousLetter = this.currentLetter.id - 1;
     if (previousLetter <= 10) {
       this.selectKey(this.keyboard.row1[previousLetter]);
-    } else if (previousLetter <= 19) {
+    } else if (previousLetter <= 20) {
       this.selectKey(this.keyboard.row2[previousLetter - 11]);
     } else {
-      this.selectKey(this.keyboard.row3[previousLetter - 20]);
+      this.selectKey(this.keyboard.row3[previousLetter - 21]);
     }
   }
 

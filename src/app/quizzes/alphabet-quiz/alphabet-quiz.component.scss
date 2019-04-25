@@ -64,7 +64,7 @@
         }
 
         .answer-correct.selected {
-            background-color: #5faf5fcf;
+            background-color: #b8f28b;
             color: rgba(0,0,0,.54);
         }
 
@@ -77,8 +77,8 @@
         }
 
         .answer-incorrect.selected {
-            background-color: #ed4d4d;
-            color: rgba(0,0,0,.54);
+            background-color: #ffc1c1;
+            color: #ed4d4d;
         }
     }
 }
@@ -93,12 +93,79 @@
     bottom: 0;
     min-height: 210px;
 
+    .check-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     button {
         height: 60px;
         width: 180px;
         font-size: 24px;
         font-weight: 300;
     }
+
+    .wrapper {
+        display: flex;
+        max-height: 160px;
+        height: 160px;
+        justify-content: center;
+        align-items: center;
+
+        .answer-img {
+            display: flex;
+            background-color: white;
+            margin: 20px;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .correct-img {
+            background-image: url(//d35aaqx5ub95lt.cloudfront.net/images/icon-sprite8.svg);
+            display: inline-block;
+            vertical-align: middle;
+            background-position: -166px -90px;
+            height: 31px;
+            width: 41px;
+        }
+
+        .incorrect-img {
+            background-image: url(//d35aaqx5ub95lt.cloudfront.net/images/icon-sprite8.svg);
+            display: inline-block;
+            vertical-align: middle;
+            background-position: -208px -90px;
+            height: 31px;
+            width: 31px;
+        }
+    }
+
+    .answer-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-weight: bolder;
+            font-size: 18px;
+        }
+    }
+}
+
+.quiz-check.checked-correct {
+    background: #b8f28b;
+    color: #58a700;
+    border-top: 2px solid #58a700;
+}
+
+.quiz-check.checked-incorrect {
+    background: #ffc1c1;
+    color: #ea2b2b;
+    border-top: 2px solid #ea2b2b;
 }
 
 img {

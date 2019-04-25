@@ -49,22 +49,31 @@
 
 </div>
 
-<div class="quiz-check container">
+<div class="quiz-check container" [class.checked-correct]="checkedAnswer === true" [class.checked-incorrect]="checkedAnswer === false">
   <div class="columns">
-    <div class="column has-text-centered">
+    <div class="column">
+    </div>
+
+    <div class="column is-7 has-text-centered">
+
+      <!-- Message checked answer -->
       <div class="wrapper">
-        <button mat-icon-button class="answer-correct" [class.selected]="correctSelected" (click)="isCorrect()">
-          <mat-icon [inline]="true" aria-label="Button to choose match is correct.">done</mat-icon>
-        </button>
-        <h2>Some text about this being the right answer</h2>
-        <h2>Some text about this being the right answer</h2>
+        <div *ngIf="checkedAnswer !== undefined" class="answer-img">
+          <span *ngIf="checkedAnswer === true" class="correct-img"></span>
+          <span *ngIf="checkedAnswer === false"class="incorrect-img"></span>
+        </div>
+        <div *ngIf="checkedAnswer !== undefined" class="answer-text">
+          <h2 *ngIf="checkedAnswer === true">¡Bien! Tu respuesta es correcta :)</h2>
+          <h2 *ngIf="checkedAnswer === false">¡Oh no! Tu respuesta es incorrecta :(</h2>
+          <h2 *ngIf="checkedAnswer === false">La seña es de la letra {{ questionAnswer.letter }}.</h2>
+        </div>
       </div>
 
     </div>
-    <div class="column is-3 has-text-centered">
+    <div class="column is-3 has-text-centered check-button">
       <button class="check-quiz" mat-raised-button aria-label="Calificar respuesta" color="accent"
-        (click)="checkAnswer()" [disabled]="correctSelected === undefined && incorrectSelected === undefined">
-        Calificar
+        (click)="handleClick()" [disabled]="correctSelected === undefined && incorrectSelected === undefined">
+        {{ buttonAction }}
       </button>
     </div>
   </div>
