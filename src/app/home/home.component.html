@@ -34,9 +34,10 @@
                     <div class="columns is-centered">
                         <div class="column has-text-centered">
                             <h2>Empecemos con lo básico, el abecedario</h2>
-                            <app-lesson-option [module]="'mod-1'" [iconName]="'sort_by_alpha'" [shortTitle]="'Abecedario'" (emitOpenLesson)='togglePanes($event)'>
+                            <app-lesson-option [module]="'mod-1'" [iconName]="'sort_by_alpha'"
+                                [shortTitle]="'Abecedario'" (emitOpenLesson)='changePane(1)'>
                             </app-lesson-option>
-                            <button mat-raised-button color="primary">Hacer Quiz</button>
+                            <button mat-raised-button color="primary" (click)="changePane(2)">Hacer Quiz</button>
                         </div>
                     </div>
 
@@ -46,9 +47,11 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé sobre números y lugares</h2>
                             <div class="module2">
-                                <app-lesson-option  [module]="'mod-2'" [iconName]="'format_list_numbered_rtl'" [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'>
+                                <app-lesson-option [module]="'mod-2'" [iconName]="'format_list_numbered_rtl'"
+                                    [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'>
                                 </app-lesson-option>
-                                <app-lesson-option  [module]="'mod-2'" [iconName]="'accessibility_new'" [shortTitle]="'Saludos'"></app-lesson-option>
+                                <app-lesson-option [module]="'mod-2'" [iconName]="'accessibility_new'"
+                                    [shortTitle]="'Saludos'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -59,15 +62,20 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé palabras generales y animales</h2>
                             <div class="module3-a">
-                                <app-lesson-option [module]="'mod-3a'" [iconName]="'home'" [shortTitle]="'Familia'"></app-lesson-option>
-                                <app-lesson-option [module]="'mod-3a'" [iconName]="'color_lens'" [shortTitle]="'Colores'"></app-lesson-option>
-                                <app-lesson-option [module]="'mod-3a'" [iconName]="'terrain'" [shortTitle]="'lugares'"></app-lesson-option>
+                                <app-lesson-option [module]="'mod-3a'" [iconName]="'home'" [shortTitle]="'Familia'">
+                                </app-lesson-option>
+                                <app-lesson-option [module]="'mod-3a'" [iconName]="'color_lens'"
+                                    [shortTitle]="'Colores'"></app-lesson-option>
+                                <app-lesson-option [module]="'mod-3a'" [iconName]="'terrain'" [shortTitle]="'lugares'">
+                                </app-lesson-option>
                             </div>
                             <div class="module3-b">
-                                <app-lesson-option  [module]="'mod-3b'" [iconName]="'restaurant'" [shortTitle]="'Comida'"></app-lesson-option>
-                                <app-lesson-option [module]="'mod-3b'"  [iconName]="'help_outline'" [shortTitle]="'Preguntas'"></app-lesson-option>
-                            
-                                
+                                <app-lesson-option [module]="'mod-3b'" [iconName]="'restaurant'"
+                                    [shortTitle]="'Comida'"></app-lesson-option>
+                                <app-lesson-option [module]="'mod-3b'" [iconName]="'help_outline'"
+                                    [shortTitle]="'Preguntas'"></app-lesson-option>
+
+
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -78,18 +86,32 @@
                         <div class="column has-text-centered">
                             <h2>Frases comunes</h2>
                             <div class="module4">
-                                <app-lesson-option  [module]="'mod-4a'" [iconName]="'pool'" [shortTitle]="'Verbos 1'"></app-lesson-option>
-                                <app-lesson-option  [module]="'mod-4a'" [iconName]="'pets'" [shortTitle]="'Animales '"></app-lesson-option>
-                                <app-lesson-option   [module]="'mod-4a'" [iconName]="'directions_bike'" [shortTitle]="'Verbos 2'"></app-lesson-option>
+                                <app-lesson-option [module]="'mod-4a'" [iconName]="'pool'" [shortTitle]="'Verbos 1'">
+                                </app-lesson-option>
+                                <app-lesson-option [module]="'mod-4a'" [iconName]="'pets'" [shortTitle]="'Animales '">
+                                </app-lesson-option>
+                                <app-lesson-option [module]="'mod-4a'" [iconName]="'directions_bike'"
+                                    [shortTitle]="'Verbos 2'"></app-lesson-option>
                             </div>
-                            <app-lesson-option [module]="'mod-4b'" [iconName]="'question_answer'" [shortTitle]="'Frases'"></app-lesson-option>
+                            <app-lesson-option [module]="'mod-4b'" [iconName]="'question_answer'"
+                                [shortTitle]="'Frases'"></app-lesson-option>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
                     </div>
 
-                    <div class="columns is-centered mini-footer">
+                    <!-- <div class="columns is-centered mini-footer">
                         <div class="column has-text-centered">
                             <mat-divider></mat-divider>
+                            <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto
+                                resolveremos tus
+                                dudas.</small>
+                        </div>
+                    </div> -->
+
+                </div>
+                <div class="home-footer container">
+                    <div class="columns is-centered mini-footer">
+                        <div class="column has-text-centered">
                             <small>Si tenés alguna duda, no dudés en contactar a Mariapaz o Catalina y con gusto
                                 resolveremos tus
                                 dudas.</small>
@@ -97,9 +119,10 @@
                     </div>
 
                 </div>
+
             </div>
             <div secondPane>
-                <app-alphabet (emitGoBack)='handleGoBack($event)'></app-alphabet>
+                <app-alphabet (emitGoBack)='handleGoBack($event)' (emitStartQuiz)='handleStartQuiz($event)'></app-alphabet>
             </div>
             <div thirdPane>
                 <app-alphabet-quiz (emitGoBack)='handleGoBack($event)'></app-alphabet-quiz>

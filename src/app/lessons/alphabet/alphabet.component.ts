@@ -17,6 +17,7 @@ export interface Key {
 export class AlphabetComponent implements OnInit {
 
   @Output() emitGoBack = new EventEmitter();
+  @Output() emitStartQuiz = new EventEmitter();
 
   /* Arrays containing Alphabet letters */
   alphabet = ['A', 'B', 'C', 'CH', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
@@ -37,6 +38,9 @@ export class AlphabetComponent implements OnInit {
   /* Progress bar max limit */
   barLimit = this.barSkip * this.alphabet.length;
 
+  /* Amount of letters already seen by user */
+  lettersSeen = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -50,8 +54,11 @@ export class AlphabetComponent implements OnInit {
     }
     if (!key.checked) {
       key.checked = true;
-      this.progress += this.barSkip;
+      this.lettersSeen++;
+      // We did it like this because JS math is weird...
+      this.progress = this.lettersSeen * (this.barSkip);
     }
+    console.log(this.progress);
     this.currentLetter = key;
   }
 
@@ -93,7 +100,7 @@ export class AlphabetComponent implements OnInit {
   }
 
   startQuiz() {
-    console.log('We haven\'t created this component yet...');
+    this.emitStartQuiz.emit();
   }
 
   getImageURL(letter: string) {

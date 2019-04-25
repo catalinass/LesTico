@@ -29,10 +29,20 @@ export class HomeComponent implements OnInit {
     this.activePane = this.panes[this.paneCounter];
   }
 
+  changePane(paneNumber: number) {
+    this.paneCounter = paneNumber;
+    console.log(this.paneCounter);
+    this.activePane = this.panes[this.paneCounter];
+  }
+
   handleGoBack() {
     this.paneCounter--;
     console.log(this.paneCounter);
     this.activePane = this.panes[this.paneCounter];
+  }
+
+  handleStartQuiz() {
+    this.changePane(2);
   }
 
 }
