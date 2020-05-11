@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "LesTico"
+  "defaultProject": "LesTico",
+  "cli": {
+    "analytics": "a327b490-f2f1-49c2-bf56-815dfeee5fc2"
+  }
 }
