@@ -38,6 +38,9 @@ export class AlphabetComponent implements OnInit {
   /* Progress bar max limit */
   barLimit = this.barSkip * this.alphabet.length;
 
+  /* Letters seen counter */
+  seen = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -52,6 +55,7 @@ export class AlphabetComponent implements OnInit {
     if (!key.checked) {
       key.checked = true;
       this.progress += this.barSkip;
+      this.seen++;
     }
     this.currentLetter = key;
   }
@@ -75,10 +79,10 @@ export class AlphabetComponent implements OnInit {
     const nextLetter = this.currentLetter.id + 1;
     if (nextLetter <= 10) {
       this.selectKey(this.keyboard.row1[nextLetter]);
-    } else if (nextLetter <= 19) {
+    } else if (nextLetter <= 20) {
       this.selectKey(this.keyboard.row2[nextLetter - 11]);
     } else {
-      this.selectKey(this.keyboard.row3[nextLetter - 20]);
+      this.selectKey(this.keyboard.row3[nextLetter - 21]);
     }
   }
 
