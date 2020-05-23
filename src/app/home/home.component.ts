@@ -29,8 +29,14 @@ export class HomeComponent implements OnInit {
     this.activePane = this.panes[this.paneCounter];
   }
 
-  handleGoBack() {
+  handleGoBack(event) {
     this.paneCounter--;
+    console.log(this.paneCounter);
+    this.activePane = this.panes[this.paneCounter];
+  }
+
+  handleOpenQuiz(event): void {
+    this.paneCounter = 3;
     console.log(this.paneCounter);
     this.activePane = this.panes[this.paneCounter];
   }
