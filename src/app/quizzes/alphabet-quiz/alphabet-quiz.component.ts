@@ -43,4 +43,16 @@ export class AlphabetQuizComponent implements OnInit {
     this.emitGoBack.emit();
   }
 
+  isCorrect(): void {
+
+  }
+
+  isIncorrect(): void {
+
+  }
+
+  startQuiz(): void {
+
+  }
+
 }
