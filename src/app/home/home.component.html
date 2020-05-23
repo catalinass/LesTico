@@ -1,12 +1,12 @@
 <section>
 
-    <button (click)="togglePanes()">
+    <button (click)="togglePanes('dummy')">
     Toggle panes
   </button>
     <div class="lesson-viewer-wrapper">
         <app-main-slider [activePane]="activePane">
             <div firstPane>
-                <div class="user-info container">
+                <div class="user-info hero">
                     <div class="text-info first">
                         <h2 class="app-title">LesTico</h2>
                     </div>
@@ -45,9 +45,9 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé sobre números y lugares</h2>
                             <div class="module2">
-                                <app-lesson-option [shortTitle]="'Números'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Saludos'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Colores'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Números'" [iconName]="'extension'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Saludos'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Colores'" [iconName]="'extension'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -58,13 +58,13 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé palabras generales y animales</h2>
                             <div class="module3-a">
-                                <app-lesson-option [shortTitle]="'Familia'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Comida'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Lugares'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Familia'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Comida'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Lugares'" [iconName]="'extension'"></app-lesson-option>
                             </div>
                             <div class="module3-b">
-                                <app-lesson-option [shortTitle]="'Frases'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Preguntas'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Frases'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Preguntas'" [iconName]="'extension'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -75,9 +75,9 @@
                         <div class="column has-text-centered">
                             <h2>Frases comunes</h2>
                             <div class="module4">
-                                <app-lesson-option [shortTitle]="'Verbos 1'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Animales'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Verbos 2'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Verbos 1'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Animales'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Verbos 2'" [iconName]="'extension'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div secondPane>
-                <app-alphabet></app-alphabet>
+                <app-alphabet (emitGoBack)="handleGoBack($event)" (emitOpenQuiz)="handleOpenQuiz($event)"></app-alphabet>
             </div>
         </app-main-slider>
 
