@@ -10,14 +10,14 @@ export class LoginComponent implements OnInit {
 
   hide = true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  login(){
+  login(): void {
     this.router.navigate(['/home']);
   }
-  
+
 }
 
