@@ -34,7 +34,7 @@
                     <div class="columns is-centered">
                         <div class="column has-text-centered">
                             <h2>Empecemos con lo básico, el abecedario</h2>
-                            <app-lesson-option [iconName]="'extension'" [shortTitle]="'Abecedario'" (emitOpenLesson)='togglePanes($event)'>
+                            <app-lesson-option [iconName]="'sort_by_alpha'" [shortTitle]="'Abecedario'" (emitOpenLesson)='togglePanes($event)'>
                             </app-lesson-option>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -45,9 +45,9 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé sobre números y lugares</h2>
                             <div class="module2">
-                                <app-lesson-option [shortTitle]="'Números'" [iconName]="'extension'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Saludos'" [iconName]="'extension'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Colores'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Números'" [iconName]="'filter_1'" (emitOpenLesson)='togglePanes($event)'></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Saludos'" [iconName]="'emoji_people'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Colores'" [iconName]="'color_lens'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -58,13 +58,13 @@
                         <div class="column has-text-centered">
                             <h2>Aprendé palabras generales y animales</h2>
                             <div class="module3-a">
-                                <app-lesson-option [shortTitle]="'Familia'" [iconName]="'extension'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Comida'" [iconName]="'extension'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Lugares'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Familia'" [iconName]="'house'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Comida'" [iconName]="'restaurant'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Lugares'" [iconName]="'nature_people'"></app-lesson-option>
                             </div>
                             <div class="module3-b">
-                                <app-lesson-option [shortTitle]="'Frases'" [iconName]="'extension'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Preguntas'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Frases'" [iconName]="'textsms'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Preguntas'" [iconName]="'help_outline'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
@@ -75,9 +75,9 @@
                         <div class="column has-text-centered">
                             <h2>Frases comunes</h2>
                             <div class="module4">
-                                <app-lesson-option [shortTitle]="'Verbos 1'" [iconName]="'extension'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Animales'" [iconName]="'extension'"></app-lesson-option>
-                                <app-lesson-option [shortTitle]="'Verbos 2'" [iconName]="'extension'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Verbos 1'" [iconName]="'directions_run'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Animales'" [iconName]="'pets'"></app-lesson-option>
+                                <app-lesson-option [shortTitle]="'Verbos 2'" [iconName]="'directions_bike'"></app-lesson-option>
                             </div>
                             <button mat-raised-button color="primary">Hacer Quiz</button>
                         </div>
